@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  grid-template-areas:
+    "one three five"
+    "one four five"
+    "two four six";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 30px;
+}
+.one {
+  grid-area: one;
+  width: 100%;
+}
+.two {
+  grid-area: two;
+  width: 100%;
+}
+.three {
+  grid-area: three;
+  width: 100%;
+}
+.four {
+  grid-area: four;
+  width: 100%;
+}
+.five {
+  grid-area: five;
+  width: 100%;
+}
+.six {
+  grid-area: six;
+  width: 100%;
+}
+@media (max-width: 746px) {
+  .container {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five"
+      "six";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 30px;
+  }
+}
